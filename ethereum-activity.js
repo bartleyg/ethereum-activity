@@ -65,7 +65,7 @@ function updateAccountBalance(userAccount) {
 }
 
 function getAccountTransactions(userAccount) {
-  url = 'http://api.etherscan.io/api?module=account&action=txlist&address=' +
+  url = 'https://api.etherscan.io/api?module=account&action=txlist&address=' +
         userAccount +
         '&sort=desc&apikey=7DS27C978SSSEUM12PEKGKFAGWDF15XH67'
   fetch(url).then(function(response) {
@@ -80,7 +80,7 @@ function getAccountTransactions(userAccount) {
 }
 
 function getAccountInternalTransactions(userAccount) {
-  url = 'http://api.etherscan.io/api?module=account&action=txlistinternal&address=' +
+  url = 'https://api.etherscan.io/api?module=account&action=txlistinternal&address=' +
         userAccount +
         '&sort=desc&apikey=7DS27C978SSSEUM12PEKGKFAGWDF15XH67'
   fetch(url).then(function(response) {
