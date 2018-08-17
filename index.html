@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <title>Ethereum Activity</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="web3-1.0.0-beta.35.min.js"></script>
+</head>
+
+<body>
+<div class="header">
+  <h1><span class="border-fix">Ethereum Activity</span></h1>
+</div>
+<div class="header-inner">
+  <p>Ethereum Activity analyzes your recent transactions to calculate
+    stats on the blockchain dapps you use most. Make sure you have
+    <a href="https://metamask.io">MetaMask</a>
+    installed and unlocked to see your activity profile.</p>
+</div>
+
+<div id='address' class='address'>Please sign into MetaMask ↗️</div>
+
+<div class="statbox-wrapper">
+  <div class="statbox">
+    <ul>
+      <li class='statbox-head'>Balance 💰</li>
+      <li id='balance'>0 ETH</li>
+    </ul>
+  </div>
+  <div class="statbox">
+    <ul>
+      <li class='statbox-head'>Transactions 🔀</li>
+      <li id='transactions'>0</li>
+    </ul>
+  </div>
+  <div class="statbox">
+    <ul>
+      <li class='statbox-head'>Account Age 📅</li>
+      <li id='age'>0 days</li>
+    </ul>
+  </div>
+  <div class="statbox">
+    <ul>
+      <li class='statbox-head'>Contracts Made 📜</li>
+      <li id='contracts'>0</li>
+    </ul>
+  </div>
+</div>
+<div class="statbox-wrapper">
+  <div class="statbox">
+    <ul>
+      <li class='statbox-head'>Avg Gas Price ⛽️</li>
+      <li id='avgGasPrice'>0 gwei</li>
+    </ul>
+  </div>
+  <div class="statbox">
+    <ul>
+      <li class='statbox-head'>Max Gas Price ⛽️</li>
+      <li id='maxGasPrice'>0 gwei</li>
+    </ul>
+  </div>
+  <div class="statbox">
+    <ul>
+      <li class='statbox-head'>Gas Spent ⛽️</li>
+      <li id='gasSpent'>0 ETH</li>
+    </ul>
+  </div>
+</div>
+
+<div class="divTable">
+  <div class="divTableHeading">
+    <div class="divTableRow">
+      <div class="divTableHeadCell">Dapp</div>
+      <div class="divTableHeadCell">Sends</div>
+      <div class="divTableHeadCell">Recvs</div>
+      <div class="divTableHeadCell">ETH Sent</div>
+      <div class="divTableHeadCell">ETH Recv</div>
+      <div class="divTableHeadCell">Gas Sent (ETH)</div>
+    </div>
+  </div>
+  <div class="divTableBody" id='dappList'>
+  </div>
+</div>
+
+<script src="dapps.json"></script>
+<script src="ethereum-activity.js"></script>
+</body>
+</html>
