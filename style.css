@@ -199,3 +199,8 @@ ul {
 .divTableBody {
 	display: table-row-group;
 }
+.byline, .byline a {
+  font-size: 8pt;
+  color: #EBEBEB;
+  text-align: center;
+}
